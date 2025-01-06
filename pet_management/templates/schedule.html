@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Lịch Khám</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quản lý Lịch Khám</h1>
+        </header>
+
+        <section>
+            <form method="POST">
+                <label for="pet_name">Tên thú cưng:</label>
+                <input type="text" id="pet_name" name="pet_name" required>
+
+                <label for="doctor_name">Tên bác sĩ:</label>
+                <input type="text" id="doctor_name" name="doctor_name" required>
+
+                <label for="time_slot">Thời gian khám:</label>
+                <input type="text" id="time_slot" name="time_slot" required>
+
+                <button type="submit">Thêm lịch khám</button>
+            </form>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên thú cưng</th>
+                    <th>Tên bác sĩ</th>
+                    <th>Thời gian</th>
+                </tr>
+                {% for schedule in schedule %}
+                <tr>
+                    <td>{{ schedule.id }}</td>
+                    <td>{{ schedule.pet_name }}</td>
+                    <td>{{ schedule.doctor_name }}</td>
+                    <td>{{ schedule.time_slot }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </div>
+</body>
+</html>

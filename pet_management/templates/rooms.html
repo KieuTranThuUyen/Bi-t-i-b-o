@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Chuồng</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quản lý Chuồng (Phòng)</h1>
+        </header>
+
+        <section>
+            <form method="POST">
+                <label for="room_name">Tên chuồng:</label>
+                <input type="text" id="room_name" name="room_name" required>
+
+                <label for="room_type">Loại chuồng:</label>
+                <input type="text" id="room_type" name="room_type" required>
+
+                <label for="capacity">Sức chứa:</label>
+                <input type="number" id="capacity" name="capacity" required>
+
+                <button type="submit">Thêm chuồng</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Danh sách chuồng hiện có</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên chuồng</th>
+                    <th>Loại chuồng</th>
+                    <th>Sức chứa</th>
+                </tr>
+                {% for room in rooms %}
+                <tr>
+                    <td>{{ room.id }}</td>
+                    <td>{{ room.room_name }}</td>
+                    <td>{{ room.room_type }}</td>
+                    <td>{{ room.capacity }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </div>
+</body>
+</html>

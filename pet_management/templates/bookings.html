@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quản lý Booking</h1>
+        </header>
+
+        <!-- Phần Quản lý Booking -->
+        <section>
+            <form method="POST" action="{{ url_for('bookings') }}">
+                <label for="pet_name">Tên thú cưng:</label>
+                <input type="text" id="pet_name" name="pet_name" required>
+
+                <label for="owner_name">Tên chủ sở hữu:</label>
+                <input type="text" id="owner_name" name="owner_name" required>
+
+                <button type="submit">Thêm booking</button>
+            </form>
+        </section>
+
+        <!-- Bảng hiển thị booking -->
+        <section>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên thú cưng</th>
+                    <th>Tên chủ sở hữu</th>
+                    <th>Trạng thái</th>
+                </tr>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.id }}</td>
+                    <td>{{ booking.pet_name }}</td>
+                    <td>{{ booking.owner_name }}</td>
+                    <td>{{ booking.status }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Quản lý Booking. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+</html>

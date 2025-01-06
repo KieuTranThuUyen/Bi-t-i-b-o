@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<header>
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+</header>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Quản Lý</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trang Quản Lý Công Việc</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="/bookings">Quản lý Booking</a></li>
+                <li><a href="/pets">Quản lý Thú Cưng</a></li>
+                <li><a href="/rooms">Quản lý Chuồng</a></li>
+                <li><a href="/schedule">Quản lý Lịch Khám</a></li>
+            </ul>
+        </nav>
+
+        <section class="info">
+            <p>Chào mừng bạn đến với hệ thống quản lý thú cưng. Bạn có thể chọn một trong các chức năng bên dưới để quản lý các dữ liệu liên quan đến thú cưng của bạn.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Quản Lý Thú Cưng. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+</html>

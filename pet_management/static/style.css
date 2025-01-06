@@ -1,0 +1,179 @@
+/* Cài đặt font chữ và các thuộc tính cơ bản */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f4; /* Màu nền nhẹ nhàng, dễ chịu */
+    color: #333; /* Màu chữ tối để dễ đọc */
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Thay đổi kích thước theo ý muốn */
+    height: auto;
+}
+
+/* Cấu trúc container cho toàn bộ trang */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Phần đầu trang */
+header h1 {
+    text-align: center;
+    font-size: 36px; /* Kích cỡ chữ lớn cho tiêu đề */
+    color: #4CAF50; /* Màu xanh lá nhạt */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Các liên kết trong menu */
+nav {
+    text-align: center;
+    margin-bottom: 40px; /* Khoảng cách dưới menu */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Giãn các mục trong menu */
+    border: 2px solid #ddd; /* Khung bao quanh các mục menu */
+    border-radius: 8px;
+    padding: 12px 25px; /* Tăng padding cho menu */
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 18px; /* Kích cỡ chữ vừa phải trong menu */
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #f1f1f1; /* Màu nền khi hover trên mỗi mục */
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Phần giới thiệu */
+.info {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* Khoảng cách giữa các phần tử và các bảng */
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 30px; /* Khoảng cách dưới tiêu đề h2 */
+}
+
+/* Khoảng cách giữa các phần tử như form, bảng và tiêu đề */
+section {
+    margin-bottom: 40px; /* Khoảng cách giữa các phần */
+}
+
+/* Phần giới thiệu của trang chủ */
+.info p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Các phần tử khác (form, bảng, v.v.) */
+form {
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+    background-color: #eaf8e4;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Căn giữa nút */
+    display: block; /* Đảm bảo nút có thể căn giữa */
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
